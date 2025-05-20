@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Workbook } from 'exceljs';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-root',
@@ -66,8 +67,20 @@ export class AppComponent {
       console.log('Datos listos para enviar:', jsonData);
 
       this.http.post('http://localhost:8000/api/upload-excel', jsonData).subscribe({
-        next: res => console.log('Respuesta del servidor:', res),
-        error: err => console.error('Error al subir datos:', err)
+        next: res => {
+          console.log('Respuesta del servidor:', res);
+          Swal.fire({
+            icon: "success",
+            title: "Exitoso",
+            text: "Archivo cargado exitosamente",});
+        },
+        error: err => {
+          Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: err.error.message,
+          });
+        }
       });
     };
 
