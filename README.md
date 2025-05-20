@@ -1,27 +1,39 @@
 # ReqExcelFrontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
+# req-excel-frontend
 
-## Development server
+Frontend en Angular para la importación y visualización de datos desde archivos Excel, diseñado para integrarse con una API Laravel. Este proyecto permite cargar registros de profesionales de la salud (u otros usuarios) junto con sus horarios de atención.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🧩 Tecnologías
 
-## Code scaffolding
+- [Angular 17+](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind](https://tailwindcss.com)
+- Integración con backend Laravel (`/import` endpoint)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 🚀 Funcionalidades
 
-## Build
+- Carga y previsualización de archivos `.xlsx` (Excel)
+- Mapeo de columnas como: `Nombre`, `RUT`, `Especialidad`, `Horario de Atención`, `Valor Consulta`
+- Envío de datos al backend vía HTTP POST
+- Validación básica del contenido antes del envío
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📦 Instalación
 
-## Running unit tests
+1. **Clona el repositorio**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+git clone https://github.com/naatox/req-excel-frontend.git
+cd req-excel-frontend
+```
+2. **Instala Dependencias**
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+3. **Iniciael servidor**
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+ng serve
+```
