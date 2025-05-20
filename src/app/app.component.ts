@@ -75,9 +75,11 @@ export class AppComponent {
             text: "Archivo cargado exitosamente",});
         },
         error: err => {
+          err.error.message = err.error.message || "Error del servidor";
+          console.error('Error al cargar el archivo:', err);
           Swal.fire({
             icon: "error",
-            title: "Oops...",
+            title: "Hubo un error",
             text: err.error.message,
           });
         }
