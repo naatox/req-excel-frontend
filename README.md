@@ -1,7 +1,5 @@
 # ReqExcelFrontend
 
-# req-excel-frontend
-
 Frontend en Angular para la importación y visualización de datos desde archivos Excel, diseñado para integrarse con una API Laravel. Este proyecto permite cargar registros de profesionales de la salud (u otros usuarios) junto con sus horarios de atención.
 
 ## 🧩 Tecnologías
