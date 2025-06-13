@@ -13,3 +13,11 @@ export interface DoctorData {
   rut: string;
 
 }
+
+export interface AvailabilitySlot {
+  day: number;
+  start_time: string;
+  end_time: string;
+  value: number;
+  eliminate?: boolean;
+}
